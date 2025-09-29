@@ -1,0 +1,111 @@
+# GitComposer ✨
+
+GitComposer is a command-line tool that uses Google's Gemini AI to automatically generate concise, conventional commit messages from your staged Git changes. It streamlines your workflow by analyzing your diff and committing the changes for you with a single command.
+
+---
+
+## The Problem It Solves
+
+Writing clear and conventional commit messages is a best practice, but it can be tedious. GitComposer takes on this task for you. It reads your staged changes, understands the context, and generates a high-quality commit message in the imperative mood (e.g., "Add user authentication feature" instead of "Added a feature"). This saves you time and ensures your project's commit history remains clean, consistent, and easy to read.
+
+## Features
+
+- 🤖 **AI-Powered Messages**: Leverages the Google Gemini CLI to generate context-aware commit messages.
+- ✅ **Interactive Workflow**: Displays the suggested message and asks for your confirmation before committing.
+- ⚙️ **Simple Interface**: Runs with a single command: `gitcomposer`.
+- 📂 **Directory-Aware**: Works on any Git repository by pointing to its path or by running it from within the project directory.
+- 📦 **Easy Installation**: Packaged and ready for installation via `pip`.
+
+## Demo
+
+Here is a typical workflow using `gitcomposer`:
+
+```sh
+# You've done some work and staged your files
+$ git add .
+
+# Run gitcomposer in your repository's directory
+$ gitcomposer
+Analyzing repository at: /home/user/projects/my-awesome-project
+Sending staged changes to Gemini to generate a commit message...
+
+✨ Suggested Commit Message ✨
+---------------------------------
+Refactor user service to use dependency injection
+---------------------------------
+
+Do you want to commit with this message? [Y/n]: y
+
+Committing changes...
+
+✅ Commit successful!
+[main 7f3b1d9] Refactor user service to use dependency injection
+ 1 file changed, 5 insertions(+), 3 deletions(-)
+```
+
+## Prerequisites
+
+Before you can use GitComposer, you must have the following tools installed and configured on your system:
+
+1.  **Git**: The version control system itself. [Installation Guide](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+2.  **Node.js and npm**: Required to install the Gemini CLI. [Installation Guide](https://nodejs.org/)
+3.  **Google Gemini CLI**: The core dependency that provides the AI capabilities.
+
+    Install it globally via `npm`:
+
+    ```bash
+    npm install -g @google/generative-ai/cli
+    ```
+
+## Installation
+
+Once the prerequisites are met, you can install GitComposer directly from PyPI:
+
+```bash
+pip install gitcomposer
+```
+
+This will automatically install the `click` library and make the `gitcomposer` command available in your terminal.
+
+## Configuration
+
+GitComposer works by calling the `gemini` command, which must be configured with your Google Gemini API key. If you haven't done so already, configure the Gemini CLI by running:
+
+```bash
+gemini auth
+```
+
+This command will prompt you to enter your API key. This is a one-time setup.
+
+## Usage
+
+The command is simple and straightforward.
+
+1.  Navigate to your Git repository in your terminal.
+2.  Stage the changes you want to commit (`git add ...`).
+3.  Run the command:
+
+    ```bash
+    gitcomposer
+    ```
+
+Alternatively, you can run the command from anywhere and pass the path to your repository as an argument:
+
+```bash
+gitcomposer /path/to/your/repository
+```
+
+The tool will then generate a message and prompt you for confirmation before committing.
+
+## How It Works
+
+1.  The `gitcomposer` command is executed in a repository with staged changes.
+2.  It runs `git diff --staged` to capture the code modifications.
+3.  This diff is sent to the Gemini CLI with a carefully crafted prompt asking for a conventional commit message.
+4.  Gemini returns a suggested message.
+5.  The message is displayed to you for approval.
+6.  If you confirm, the tool executes `git commit -m "The generated message"` to finalize the commit.
+
+## License
+
+This project is licensed under the MIT License. See the `LICENSE` file for details.

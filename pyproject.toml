@@ -1,0 +1,9 @@
+[project]
+name = "gitcomposer"
+version = "0.1.0"
+dependencies = [
+    "click>=8.0",
+]
+
+[project.scripts]
+gitcomposer = "gitcomposer.main:cli"

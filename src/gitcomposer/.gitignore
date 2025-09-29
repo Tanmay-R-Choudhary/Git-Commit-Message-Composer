@@ -1,0 +1,31 @@
+# Byte-code files
+*.pyc
+__pycache__/
+
+# Virtual environment
+.venv/
+venv/
+env/
+# You might need to adjust this if your virtual environment is named differently
+
+# Editor/IDE specific files
+.idea/ # IntelliJ/PyCharm
+.vscode/ # VS Code
+*.sublime-project
+*.sublime-workspace
+
+# Operating System files
+.DS_Store # macOS
+Thumbs.db # Windows
+
+# Build artifacts
+dist/
+build/
+*.egg-info/
+
+# Log files
+*.log
+
+# Sensitive information/configuration (example)
+config.ini # Or other configuration files that contain sensitive data
+.env # Environment variables

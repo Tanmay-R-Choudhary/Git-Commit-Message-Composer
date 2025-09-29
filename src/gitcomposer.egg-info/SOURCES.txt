@@ -1,0 +1,9 @@
+pyproject.toml
+src/gitcomposer/__init__.py
+src/gitcomposer/main.py
+src/gitcomposer.egg-info/PKG-INFO
+src/gitcomposer.egg-info/SOURCES.txt
+src/gitcomposer.egg-info/dependency_links.txt
+src/gitcomposer.egg-info/entry_points.txt
+src/gitcomposer.egg-info/requires.txt
+src/gitcomposer.egg-info/top_level.txt
