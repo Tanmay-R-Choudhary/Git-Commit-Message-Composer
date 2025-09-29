@@ -91,11 +91,11 @@ Before you can use GitComposer, you must have the following tools installed and 
 2. **Node.js and npm**: Required to install the Gemini CLI. [Installation Guide](https://nodejs.org/)
 3. **Google Gemini CLI**: The core dependency that provides the AI capabilities.
 
-    Install it globally via `npm`:
+   Install it globally via `npm`:
 
-    ```bash
-    npm install -g @google/generative-ai/cli
-    ```
+   ```bash
+   npm install -g @google/gemini-cli
+   ```
 
 ## Installation
 
@@ -125,9 +125,9 @@ The command is simple and straightforward.
 2. Stage the changes you want to commit (`git add ...`).
 3. Run the command:
 
-    ```bash
-    gitcomposer
-    ```
+   ```bash
+   gitcomposer
+   ```
 
 Alternatively, you can run the command from anywhere and pass the path to your repository as an argument:
 
