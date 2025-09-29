@@ -1,4 +1,4 @@
-# GitComposer ✨
+# GitComposer
 
 GitComposer is a command-line tool that uses Google's Gemini AI to automatically generate concise, conventional commit messages from your staged Git changes. It streamlines your workflow by analyzing your diff and committing the changes for you with a single command.
 
@@ -47,9 +47,9 @@ Committing changes...
 
 Before you can use GitComposer, you must have the following tools installed and configured on your system:
 
-1.  **Git**: The version control system itself. [Installation Guide](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
-2.  **Node.js and npm**: Required to install the Gemini CLI. [Installation Guide](https://nodejs.org/)
-3.  **Google Gemini CLI**: The core dependency that provides the AI capabilities.
+1. **Git**: The version control system itself. [Installation Guide](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+2. **Node.js and npm**: Required to install the Gemini CLI. [Installation Guide](https://nodejs.org/)
+3. **Google Gemini CLI**: The core dependency that provides the AI capabilities.
 
     Install it globally via `npm`:
 
@@ -81,9 +81,9 @@ This command will prompt you to enter your API key. This is a one-time setup.
 
 The command is simple and straightforward.
 
-1.  Navigate to your Git repository in your terminal.
-2.  Stage the changes you want to commit (`git add ...`).
-3.  Run the command:
+1. Navigate to your Git repository in your terminal.
+2. Stage the changes you want to commit (`git add ...`).
+3. Run the command:
 
     ```bash
     gitcomposer
@@ -99,12 +99,12 @@ The tool will then generate a message and prompt you for confirmation before com
 
 ## How It Works
 
-1.  The `gitcomposer` command is executed in a repository with staged changes.
-2.  It runs `git diff --staged` to capture the code modifications.
-3.  This diff is sent to the Gemini CLI with a carefully crafted prompt asking for a conventional commit message.
-4.  Gemini returns a suggested message.
-5.  The message is displayed to you for approval.
-6.  If you confirm, the tool executes `git commit -m "The generated message"` to finalize the commit.
+1. The `gitcomposer` command is executed in a repository with staged changes.
+2. It runs `git diff --staged` to capture the code modifications.
+3. This diff is sent to the Gemini CLI with a carefully crafted prompt asking for a conventional commit message.
+4. Gemini returns a suggested message.
+5. The message is displayed to you for approval.
+6. If you confirm, the tool executes `git commit -m "The generated message"` to finalize the commit.
 
 ## License
 
