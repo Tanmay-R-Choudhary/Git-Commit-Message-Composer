@@ -9,14 +9,14 @@ env/
 # You might need to adjust this if your virtual environment is named differently
 
 # Editor/IDE specific files
-.idea/ # IntelliJ/PyCharm
-.vscode/ # VS Code
+.idea/
+.vscode/
 *.sublime-project
 *.sublime-workspace
 
 # Operating System files
-.DS_Store # macOS
-Thumbs.db # Windows
+.DS_Store
+Thumbs.db
 
 # Build artifacts
 dist/
@@ -27,5 +27,5 @@ build/
 *.log
 
 # Sensitive information/configuration (example)
-config.ini # Or other configuration files that contain sensitive data
-.env # Environment variables
+config.ini
+.env

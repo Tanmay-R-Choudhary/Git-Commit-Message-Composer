@@ -1,9 +1,27 @@
 [project]
 name = "gitcomposer"
 version = "0.1.0"
+authors = [
+    { name="Tanmay Choudhary", email="tanmay.d.choudhary@gmail.com" },
+]
+description = "An AI-powered CLI to generate git commit messages using Google Gemini."
+readme = "README.md"
+license = { file="LICENSE" }
+requires-python = ">=3.8"
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "Environment :: Console",
+    "Topic :: Software Development :: Version Control :: Git",
+    "Topic :: Text Processing :: General",
+]
 dependencies = [
     "click>=8.0",
 ]
+
+[project.urls]
+Homepage = "https://github.com/Tanmay-R-Choudhary/Git-Commit-Message-Composer"
 
 [project.scripts]
 gitcomposer = "gitcomposer.main:cli"
